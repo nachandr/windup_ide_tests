@@ -509,7 +509,6 @@ class VisualStudioCode(Application):
         self.press_keys("up")
         self.press_keys("enter")
         self.wait_find_element(locator_type="image", locator="analysis_progress.png", timeout=120.0)
-        self.wait_find_element(locator_type="image", locator="analysis_complete.png", timeout=120.0)
 
     def is_analysis_complete(self):
         """
