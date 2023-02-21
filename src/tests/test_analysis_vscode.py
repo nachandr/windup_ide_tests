@@ -1,10 +1,12 @@
+from src.lib.config import config_data
+
 def test_analysis_eap(setup_vscode):
     """
     Test to run an analysis on migration from weblogic to EAP 7 in VSCode IDE
     source : windup-rulesets/target/classes/eap7/weblogic/tests/data
     target : eap7
     """
-    vscode, config = setup_vscode
+    vscode = setup_vscode
     vscode.open_mta_perspective()
     vscode.run_simple_analysis(
         project=config["project_paths"]["eap7_generic"],
